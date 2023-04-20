@@ -19,6 +19,7 @@
 
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/locales/et.js'></script>
+   
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -28,11 +29,15 @@
                 height: 'auto',
                 contentHeight: 'auto',
                 timeZone: 'Europe/Tallinn' ,
-                locale: 'et'
+                locale: 'et',
+                firstDay: 1
+
             });
             calendar.render();
         });
     </script>
+    
+
 
 @endsection
 

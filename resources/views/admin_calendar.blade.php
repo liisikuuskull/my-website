@@ -16,6 +16,7 @@
           contentHeight: 'auto',
           timeZone: 'Europe/Tallinn' ,
 		      locale: 'et' ,
+          firstDay: 1
 
         });
         calendar.render();
@@ -50,6 +51,9 @@
   </head>
   <body>
     <div id='calendar'></div>
+
+    <form action="eventInsert" method="post" enctype="multipart/form-data">
+      @csrf
     
     <div class="modal fade" id="event_entry_modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
       <div class="modal-dialog modal-md" role="document">
@@ -65,7 +69,8 @@
               <div class="row">
                 <div class="col-sm-12">  
                   <div class="form-group">
-                    <label for="event_name">Trenni nimi</label>
+                    
+                    <label for="event_name" class="control-label">Trenni nimi</label>
                     <select name="event_name" id="event_name" class="form-control">
 						<option value="valik1">Choreo</option>
 						<option value="valik2">Exotic tants</option>
@@ -73,22 +78,22 @@
     				</select>
                   </div>
 				  <div class="form-group">
-    				<h5><label for="event_comment">Kommentaar</label></h5>
-   					 <textarea name="event_comment" id="event_comment" class="form-control" placeholder="Lisa siia kommentaar"></textarea>
+    				<h5><label for="event_comment" class="control-label">Kommentaar</label></h5>
+   					 <textarea name="event_comment" class="form-control" placeholder="Lisa siia kommentaar"></textarea>
 				 </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-6">  
                   <div class="form-group">
-                  <label for="event_start_date">Algus</label>
-                  <input type="datetime-local" name="event_start_date" id="event_start_date" class="form-control onlydatepicker" placeholder="Event start date">
+                  <label for="event_start_date" class="control-label">Algus</label>
+                  <input type="datetime-local" name="event_start_date" class="form-control onlydatepicker" placeholder="Event start date">
 
                 </div>
                 <div class="col-sm-6">  
                   <div class="form-group">
-                    <label for="event_end_date">Lõpp</label>
-                    <input type="datetime-local" name="event_end_date" id="event_end_date" class="form-control" placeholder="Event end date">
+                    <label for="event_end_date" class="control-label">Lõpp</label>
+                    <input type="datetime-local" name="event_end_date" class="form-control" placeholder="Event end date">
                   </div>
                 </div>
               </div>
@@ -101,7 +106,8 @@
         </div>
       </div>
     </div>
-    
+
+   </form>
   </body>
 </html>
 

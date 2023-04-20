@@ -16,7 +16,8 @@
           height: 'auto',
           contentHeight: 'auto',
           timeZone: 'Europe/Tallinn' ,
-          locale: 'et'
+          locale: 'et',
+          firstDay: 1
 
         });
         calendar.render();
@@ -25,6 +26,7 @@
     </script>
   </head>
   <body>
+    
     <div id='calendar'></div>
   </body>
 </html>

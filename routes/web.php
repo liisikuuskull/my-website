@@ -4,6 +4,10 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Laravel\Socialite\Facades\Socialite;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +19,7 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -23,10 +27,23 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
-});
 
+    
+});
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+/*
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+*/
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -34,6 +51,74 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/auth/redirect', function () {
+    return Socialite::driver('github')->redirect();
+});
+
+Route::get('/auth/callback', function () {
+    $githubUser = Socialite::driver('github')->user();
+
+    $user = User::updateOrCreate([
+        'github_id' => $githubUser->id
+
+    ], [
+        'name' => $githubUser-> name,
+        'email' => $githubUser-> email,
+        'github_token' => $githubUser-> token,
+        'github_refresh_token' => $githubUser-> refreshToken,
+    ]);
+
+    Auth::login($user);
+
+    return redirect('/dashboard');
+});
+
+/*
+
+Route::get('/auth/redirect', function () {
+    return Socialite::driver('google')->redirect();
+});
+
+Route::get('/auth/callback', function () {
+    $googleUser = Socialite::driver('google')->user();
+
+    $user = User::create([
+        'name' => $googleUser-> name,
+        'email' => $googleUser-> email,
+        'google_id' => $googleUser-> id,
+        'google_token' => $googleUser-> token,
+        'google_refresh_token' => $googleUser-> refreshToken,
+    ]);
+
+    Auth::login($user);
+
+    return redirect('/dashboard');
+});
+
+Route::get('/auth/redirect', function () {
+    return Socialite::driver('facebook')->redirect();
+});
+
+Route::get('/auth/callback', function () {
+    $facebookUser = Socialite::driver('facebook')->user();
+
+    $user = User::create([
+        'name' => $facebookUser-> name,
+        'email' => $facebookUser-> email,
+        'facebook_id' => $facebookUser-> id,
+        'facebook_token' => $facebookUser-> token,
+        'facebook_refresh_token' => $facebookUser-> refreshToken,
+    ]);
+
+    Auth::login($user);
+
+    return redirect('/dashboard');
+});
+
+
+*/
+
 
 Route::get('/home', function () {
     return view('home');
@@ -54,11 +139,11 @@ Route::get('/hinnakiri', function () {
 Route::get('/kontakt', function () {
     return view('kontakt');
 });
-
+/*
 Route::get('/logi_sisse', function () {
     return view('logi_sisse');
 });
-
+*/
 Route::get('/peopaketid', function () {
     return view('peopaketid');
 });
@@ -97,5 +182,7 @@ Route::post('/create-payment-intent', 'PaymentsController@createPaymentIntent');
 
 
 Route::get('/events', 'EventController@index')->name('events.index');
+
+
 
 require __DIR__.'/auth.php';

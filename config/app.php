@@ -191,6 +191,8 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class, //PANIN SELLE SIIA
+        
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
@@ -211,5 +213,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
+
+    'Socialite' => Laravel\Socialite\Facades\Socialite::class, //SELLE PANIN SIIA
 
 ];

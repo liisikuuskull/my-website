@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -119,10 +120,10 @@ Route::get('/auth/callback', function () {
 
 */
 
+Route::get('/home', [PagesController::class, 'home']);
 
-Route::get('/home', function () {
-    return view('home');
-});
+
+
 
 Route::get('/trennid', function () {
     return view('trennid');

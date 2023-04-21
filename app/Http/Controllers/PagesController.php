@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class PagesController extends Controller
 {
     public function home()
-    {
-        return view('home');
+    {   $url = "https://admin.hopitude.com/api/v1/calendar/workout-events/club/1460/?format=json&from=1680307200000&to=1682812800000";
+        $response = Http::get($url)->json();
+        return view('home', [
+            "timetable" => $response
+        ]);
     }
 
     public function tunniplaan()

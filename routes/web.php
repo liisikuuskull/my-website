@@ -129,9 +129,12 @@ Route::get('/trennid', function () {
     return view('trennid');
 });
 
+/*
 Route::get('/blogi', function () {
     return view('blogi');
 });
+
+*/
 
 Route::get('/hinnakiri', function () {
     return view('hinnakiri');
@@ -149,8 +152,8 @@ Route::get('/peopaketid', function () {
     return view('peopaketid');
 });
 
-Route::get('/teenused', function () {
-    return view('teenused');
+Route::get('/stuudio', function () {
+    return view('stuudio');
 });
 
 Route::get('/tooted', function () {
@@ -161,13 +164,20 @@ Route::get('/tunniplaan', function () {
     return view('tunniplaan');
 });
 
+Route::get('/galerii', function () {
+    return view('galerii');
+});
+
+/*
 Route::get('/admin_calendar', function () {
     return view('admin_calendar');
 });
 
+
 Route::get('/registreeri', function () {
     return view('registreeri');
 });
+
 
 Route::get('/maksmine', function () {
     return view('maksmine');
@@ -184,6 +194,6 @@ Route::post('/create-payment-intent', 'PaymentsController@createPaymentIntent');
 
 Route::get('/events', 'EventController@index')->name('events.index');
 
-
+*/
 
 require __DIR__.'/auth.php';

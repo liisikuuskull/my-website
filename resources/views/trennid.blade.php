@@ -1,49 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layouts.main')
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-        /* adjust navbar height and padding */
-        .navbar {
-            height: 60px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            background-image: linear-gradient(to right top, #dbabb0, #d4a6ae, #cda0ac, #c59ba9, #bd96a7, #b692a4, #ae8da2, #a7899f, #9e849c, #967f98, #8d7b94, #847690);
-        }
-        /* adjust logo size */
-        .navbar img {
-            height: 40px;
-            width: auto;
-        }
-    </style>
+@section('content')
 
-    <title>Studio Femme</title>
-</head>
+<style>
 
-<body>
+  body {
+    background-color: #e0e0e0;
+    font-family: 'Open Sans', sans-serif;
+    
+  }
+  .rounded-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center center;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .col-md-4 {
+    margin-top: 190px;
+    padding-left: 40px; 
+    /*
+    background-color: #fddfd5; 
+   */ 
+  }
+  
+  
+  .middle-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo">
-    </a>
+  .exotic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: -70px; /* add negative margin here */
+}
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-           
-            <li class="nav-item">
-                <a class="nav-link" href="trennid">Trennid</a>
-            </li>
-            
-        </ul>
+h5 {
+  background-color: #fddfd5;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+
+</style>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="text-center">
+      <img src="{{ asset('images/choreo.jpeg') }}" alt="choreo" class="rounded-img">
     </div>
-</nav>
+    <h5>Choreo</h5>
+    <p>Choreo on algajatele mõeldud tantsutund, kuhu on oodatud ka edasijõudnud oma baasoskusi parandama. Selles tunnis on sul lihtsam kaasa teha, kui oled eelnevalt käinud personaaltreeningutel või läbinud algtaseme kursuse.</p>
+  </div>
+  <div class="col-md-4">
+  <div class="text-center exotic">
+    <img src="{{ asset('images/exotic.jpg') }}" alt="exotic" class="rounded-img">
+    <h5>Exotic</h5>
+    <p>Exotic tunnis me eneseväljenduse koha pealt tagasi ei hoia. Ehime end ilusate tantsuriietega ja spetsiaalsete kontsakingadega, mis panevad meid hästi tundma. Väljendame kehaga oma tundeid ja naudime peeglist oma uhket tantsu. Tantsukava sisaldab liikumisi nii postil, kui ka põrandal. Liikumine olenevalt muusikast ja stiilist võib olla jõuline ja konkreetne või sulgkerge ja voolav.</p>
+  </div>
+</div>
 
-@yield('content')
+  <div class="col-md-4">
+    <div class="text-center">
+      <img src="{{ asset('images/tricks.jpeg') }}" alt="tricks" class="rounded-img">
+    </div>
+    <h5>Tricks</h5>
+    <p>Treening pakub põnevat väljakutset ja eneseteostamise võimalust. Treeningul keskendume postitantsu trikkidele.</p>
+  </div>
+</div>
+
+@endsection

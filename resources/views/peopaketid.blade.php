@@ -1,49 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layouts.main')
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-        /* adjust navbar height and padding */
-        .navbar {
-            height: 60px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            background-image: linear-gradient(to right top, #dbabb0, #d4a6ae, #cda0ac, #c59ba9, #bd96a7, #b692a4, #ae8da2, #a7899f, #9e849c, #967f98, #8d7b94, #847690);
-        }
-        /* adjust logo size */
-        .navbar img {
-            height: 40px;
-            width: auto;
-        }
-    </style>
+@section('content')
 
-    <title>Studio Femme</title>
-</head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo">
-    </a>
+ 
+  <div id="text-container1">
+    <h4>Peopakett 60 min/ 130 €</h4>
+    <p>Pakett sisaldab: 45 minutit spetsiaalselt <br> teile ettevalmistatud postitantsu trenni. <br> 15 minutit jääb grupipiltideks ning trennis õpitu pildistamiseks ja filmimiseks.</p>
+  </div>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+  <div id="text-container2">
+    <h4>Peopakett 90 min/ 165 €</h4>
+    <p>Pakett sisaldab 1h spetsiaalselt teile <br> ettevalmistatud postitantsu trenni. <br> Lisaks 30 minutit stuudio aega, et saaksite <br> mõnusalt koos olla, teha grupipilte ning trennis õpitut pildistada ja filmida.</p>
+  </div>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-           
-            <li class="nav-item">
-                <a class="nav-link" href="peopaketid">Peopaketid</a>
-            </li>
-            
-        </ul>
-    </div>
-</nav>
+  <div id="picture-container">
+    <img src="{{ asset('images/peopakett.jpg') }}" alt="peopakett" style="width: 25%; height: 25%; margin-left: 120px; margin-top: -500px; border-radius: 3%;">
 
-@yield('content')
+  </div>
+  
+
+  </body>
+
+  <style>
+    body {
+
+    background-color: #e0e0e0;
+    font-family: 'Open Sans', sans-serif;
+    
+    
+   
+    height: 97.33vh;
+  
+}
+/*
+  h3 {
+        margin-top: -350px;
+        margin-right: 670px;
+        font-size: 36px;
+        text-align: center;
+        color: #333;
+        
+      }
+/*
+#card {
+  width: 300px;
+  height: 400px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: inset 1px 1px 0.12px rgba(255, 255, 255, 0.4),
+    1px 1px 3px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-top: 80px;
+  
+
+  animation: move 5s ease-in-out infinite;
+  background-clip: padding-box;
+}
+/*
+h1 {
+  position: absolute;
+  z-index: 1;
+  font-size: 200px;
+  letter-spacing: 15px;
+  color: #fff;
+}
+
+
+
+@keyframes move {
+  0% {
+    transform: translateX(-200px);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-200px);
+  }
+}
+
+#rect1 {
+  top: 150px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: inset 1px 1px 0.12px rgba(255, 255, 255, 0.4),
+    1px 1px 3px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: absolute;
+  margin-left: 1070px;
+  margin-top: 80px;
+}
+
+#rect2 {
+  top: 420px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: inset 1px 1px 0.12px rgba(255, 255, 255, 0.4),
+    1px 1px 3px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: absolute;
+  margin-left: 1060px;
+ 
+}
+
+*/
+
+#text-container1 {
+    width: 30%;
+    margin-left: 700px;
+    margin-top: 60px;
+    padding: 16px;
+    color: #333;
+    background-color: #fddfd5;
+  }
+
+  #text-container2 {
+    width: 30%;
+    margin-left: 700px;
+    margin-top: 70px;
+    padding: 16px;
+    color: #333;
+    background-color: #fddfd5;
+    
+  }
+
+  #text-container2 p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+
+  }
+
+  @media only screen and (max-width: 768px) {
+            .left {
+                width: 50%;
+            }
+
+            .middle {
+                width: 50%;
+            }
+
+            #text-container1, #text-container2 {
+                position: relative;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                padding: 10px;
+                text-align: center;
+                z-index: 1; /* text is then front and moving part is back */
+              }
+
+
+          }
+
+  
+
+
+
+  </style>
+
+
+@endsection
+

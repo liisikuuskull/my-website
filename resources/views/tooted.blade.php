@@ -253,7 +253,7 @@
       <!-- Product 14 -->
       <img src="{{ asset('images/product-14.jpg') }}" alt="" style="border-radius: 10px;">
         <h5 style="margin-top: 10px;">Tossud (roosa)</h5>
-        <p>Description of Product 12</p>
+        <p>Description of Product 14</p>
         <span class="price">50 €</span>
         <div class="product-actions">
         <select class="size">
@@ -274,7 +274,7 @@
       <!-- Product 15 -->
       <img src="{{ asset('images/product-15.jpg') }}" alt="" style="border-radius: 10px;">
         <h5 style="margin-top: 10px;">Tossud (must)</h5>
-        <p>Description of Product 12</p>
+        <p>Description of Product 15</p>
         <span class="price">50 €</span>
         <div class="product-actions">
         <select class="size">
@@ -295,7 +295,7 @@
       <!-- Product 16 -->
       <img src="{{ asset('images/product-16.jpg') }}" alt="" style="border-radius: 10px;">
         <h5 style="margin-top: 10px;">Veepudel</h5>
-        <p>Description of Product 12</p>
+        <p>Description of Product 16</p>
         <span class="price">20 €</span>
         <div class="product-actions">
        
@@ -340,8 +340,8 @@
   }
   
   .product {
-    width: 100%;
-    margin-left: 30px;
+    flex-basis: 90%;
+    margin-left: 5%;
   }
   
   .left {

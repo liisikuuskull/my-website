@@ -4,48 +4,45 @@
 
 
 <body>
-    <div>
-        <img src="{{ asset('images/background.jpg') }}" alt="background" class="bg-image">
-    </div>
-
-    <div class="container-glass">
-        <p class="text">
-	
-            Tule postitantsu stuudiosse Kuressaare südalinnas ning avasta endas uusi võimeid. Kui soovid end proovile panna ning samal ajal ka lõbusalt aega veeta, siis oled õiges kohas!
-        </p>
-        <button class="btn" onclick="window.open('https://app.hopitude.com/et/calendar?cl=1460')">Broneeri trenni</button>
-
-    </div>
+    <section class="calendar-section" style="background-image: url('{{ asset('images/background.jpg') }}'); background-repeat: no-repeat; background-size: 100%; background-position-y: 27%;">
+    <div id='calendar'></div>
+      <div class="container-glass">
+          <p class="text">
+              Tule postitantsu stuudiosse Kuressaare südalinnas ning avasta endas uusi võimeid. Kui soovid end proovile panna ning samal ajal ka lõbusalt aega veeta, siis oled õiges kohas!
+          </p>
+          <div class="btn-container">
+            <button class="btn" onclick="window.open('https://app.hopitude.com/et/calendar?cl=1460')">Broneeri trenni</button>
+          </div>
+      </div>
+    </section>
 
 </body>
 
-
-
-
-
-
 <style>
 
-  
+  /*
+
+div {
+    border: 1px solid rgb(255, 0, 0);
+  }
+  */
+  .calendar-section {
+    padding: 32px 16px;
+  }
+
     #calendar  {
         width: 80%; /* Decrease the width to make space for the right-hand side */
-        float: auto; /* Float the calendar to the right-hand side */
-        height: 60vh;
-        position: absolute;
-        top: 80px;
-        left: 100px;
-        bottom: 0;
-        right: 0; 
-        
-    
-        
-        
+        margin-inline: auto;
     }
     .fc-daygrid-day.fc-day {
         background-color: #fbc1ac;
         
     }
-
+/* ei muuda
+    .fc-daygrid-event-dot {
+      color: red!important;
+    }
+*/
     .fc-day {
         background-color: lightgray;
     }
@@ -54,6 +51,7 @@
         color: black;       
         text-decoration: underline;
         background-color: lightgray;
+        border-radius: 10px;
         }
 
     
@@ -67,26 +65,32 @@
         background-color: #F7C99D  !important;
     }
 
-   
+    .fc-daygrid-day.fc-day-today {
+      background-color: #9FE2BF !important; 
+    }
+
+    /* kalendri nurgad ei jää ilusalt
+    .fc-scrollgrid {
+      border-radius: 10px!;
+    }
+*/
 
 .container-glass,
 .container-glass::before,
 .container-glass::after {
+  margin-top: 20px;
   border-radius: 7px;
   background-color: rgba(255, 255, 255, .2);
   backdrop-filter: blur(5px);
   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.08);
 }
 .container-glass {
-  position: fixed;
-  
-  bottom: 200px;
   padding: 2rem 1.5rem;
   width: 80%;
   max-width: 280px;
-  margin-left: 940px;
-  margin-top: 0px;
+  margin-left: auto;
 }
+/*
 .container-glass::before,
 .container-glass::after {
   content: '';
@@ -106,6 +110,7 @@
   right: -10px;
   z-index: 2;
 }
+*/
 
 .container-glass .img {
   width: 100%;
@@ -127,17 +132,19 @@
   width: 80%;
   max-width: 200px;
   padding: .6rem 1rem;
-  background-color: transparent;
+  background-color: #fbc1ac;
   border: 1px solid #fddfd5;
   border-radius: 5px;
   color: #FFFFFF;
   cursor: pointer;
   transition: all .2s linear;
 }
+
 .container-glass .btn:hover {
-  background-color: #fbc1ac;
+  background-color: transparent;
   color: #333;
 }
+
 
 
 a {
@@ -146,15 +153,69 @@ text-decoration: none;
 background-color: transparent;
 -webkit-text-decoration-skip: objects;
 }
+
+.btn-container {
+    
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
 @media only screen and (max-width: 768px) {
         #calendar {
             left: 50%;
             transform: translateX(-50%);
-            width: 100%;
+            width: 85%;
         }
 
-        .container-glass {
-            display: none;
+        .fc-toolbar-title {
+            color: black;       
+            text-decoration: underline;
+            background-color: lightgray;
+            font-size: 18px !important;
+            margin-left: 10px !important;   
+        }
+
+        .fc-button-group {
+            font-size: 10px !important;
+        }
+
+        .fc-today-button {
+            font-size: 10px !important;
+        }
+
+        .btn-container {
+            
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .col-md-4 {
+            margin-top: 190px;
+            padding-left: 40px; 
+            margin-right: 5px;
+        }
+
+        .middle-col {
+            display: flex;
+            
+            margin-right: 7px !important;
+            margin-left: 5px !important;
+            
+            
+        }
+
+        #container1 {
+            width: 100%;
+            margin-top: 90px;
+            margin-left: 5px;
+            margin-right: 7px;
+            margin-bottom: 10px !important;
+            padding: 16px;
+            color: #333;
+            background-color: #fddfd5;
+            border-radius: 10px;
+            position: center;
         }
 
 
@@ -169,9 +230,6 @@ background-color: transparent;
 }
 
 </style>
-
-
-<div id='calendar'></div>
 
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/locales/et.js'></script>
@@ -205,7 +263,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <style>
 
-  body {
+  
+body {
     background-color: #e0e0e0;
     font-family: 'Open Sans', sans-serif;
     
@@ -262,13 +321,13 @@ h5 {
       <img src="{{ asset('images/choreo.jpeg') }}" alt="choreo" class="rounded-img">
     </div>
     <h5>Choreo</h5>
-    <p>Choreo on algajatele mõeldud tantsutund, kuhu on oodatud ka edasijõudnud oma baasoskusi parandama. Selles tunnis on sul lihtsam kaasa teha, kui oled eelnevalt käinud personaaltreeningutel või läbinud algtaseme kursuse.</p>
+    <p>Choreo on algajatele mõeldud tantsutund,<br> kuhu on oodatud ka edasijõudnud oma baas-<br>oskusi parandama.<br> Selles tunnis on sul lihtsam kaasa teha,<br> kui oled eelnevalt käinud personaaltreeningutel või läbinud algtaseme kursuse.</p>
   </div>
   <div class="col-md-4">
   <div class="text-center exotic">
     <img src="{{ asset('images/exotic.jpg') }}" alt="exotic" class="rounded-img">
     <h5>Exotic</h5>
-    <p>Exotic tunnis me eneseväljenduse koha pealt tagasi ei hoia. Ehime end ilusate tantsuriietega ja spetsiaalsete kontsakingadega, mis panevad meid hästi tundma. Väljendame kehaga oma tundeid ja naudime peeglist oma uhket tantsu. Tantsukava sisaldab liikumisi nii postil, kui ka põrandal. Liikumine olenevalt muusikast ja stiilist võib olla jõuline ja konkreetne või sulgkerge ja voolav.</p>
+    <p>Exotic tunnis me eneseväljenduse koha pealt tagasi ei hoia. Ehime end ilusate tantsuriietega<br>ja spetsiaalsete kontsakingadega, mis panevad meid hästi tundma. Väljendame kehaga oma tundeid ja naudime peeglist oma uhket tantsu. Tantsukava sisaldab liikumisi nii postil, kui ka põrandal. Liikumine olenevalt muusikast ja stiilist võib olla jõuline ja konkreetne või sulgkerge ja voolav.</p>
   </div>
 </div>
 
@@ -282,6 +341,25 @@ h5 {
 </div>
 
 
+</body>
+
+<style>
+
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+
+
+
+
+
+</style>
 
 
 

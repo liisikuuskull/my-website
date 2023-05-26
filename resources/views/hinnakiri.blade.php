@@ -4,9 +4,9 @@
 @section('content')
 
 <div id="container"></div>
-  <div style="display:flex; flex-direction:column; align-items:center; margin-top: 20px;">
+  <div style="display:flex; flex-direction:column; align-items:center; margin-top: 20px; background-color: #fddfd5; border-radius: 10px;margin-left: 80px; margin-right: 80px; padding: 5px; width: 70%;">
     <h2 style="text-align:center;">Hinnakiri</h2>
-    <hr style="border: none; border-top: 7px solid #fddfd5; width: 80%; margin-bottom: 20px;">
+    
     <ul style="list-style:none; padding:0; margin-top:10px;">
       <li style="display:flex; justify-content:space-between; margin-bottom:10px;">
         <span style="flex-grow:1; margin-right: 10px;">Ühekordne külastus</span>
@@ -37,13 +37,17 @@
         <span style="margin-left:auto;">15 €/ h</span>
       </li>
     </ul>
-    <p style="text-align:center; margin-top:20px;">*Kõik kuukaardid kehtivad ostu hetkest 31 päeva, mille sisse mahub 5 nädala ulatuses trennipäevi.</p>
+    <p style="text-align:center; margin-top:20px;">*Kõik kuukaardid kehtivad ostu hetkest 31 päeva,<br> mille sisse mahub 5 nädala ulatuses trennipäevi.</p>
     <p style="text-align:center;">*Teenuste eest saab tasuda stuudios kohapeal.</p>
   </div>
 </div>
 
 <style>
-
+/*
+div {
+    border: 1px solid rgb(255, 0, 0);
+  }
+*/
   body {
     background-color: #e0e0e0;
     font-family: 'Open Sans', sans-serif;
@@ -62,12 +66,19 @@
     height: 100%;
     object-fit: cover;
   }
+  
 
   /* media query for smaller screens */
   @media only screen and (max-width: 760px) {
     .image-container1 {
       display: none; /* hide the image */
     }
+
+    div {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
 
     /* its not working how i want
     #container {
@@ -96,14 +107,15 @@
   /* media query for smaller screens */
   @media only screen and (max-width: 800px) {
 
-    .image-container1 {
+    .image-container1, .image-container2  {
       display: none; /* hide the image */
       
     }
-    .image-container2 {
-      display: none; /* hide the image */
-      
+
+    #container {
+      width: 30%;
     }
+   
   }
   
 </style>

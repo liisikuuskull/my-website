@@ -16,9 +16,7 @@
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <div class='img' style='background-image:url(https://images.unsplash.com/photo-1417436026361-a033044d901f?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=faa4e192f33e0d6b7ce0e54f15140e42);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+            <img src="{{ asset('images/galerii1.jpg') }}" alt="Galerii1">
           </a>
         </div>
       </li>
@@ -26,72 +24,60 @@
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-                <div class='img' style='background-image: url(https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=49dab7a5e4b2e28b5707bc2db974c94b);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii2.jpg') }}" alt="Galerii2">  
           </a>
         </div>
       </li>
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <div class='img' style='background-image: url(https://images.unsplash.com/photo-1425668273332-3a46ab26b161?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=d453ab3dec298c43415526458b360fa6);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii3.jpg') }}" alt="Galerii3"> 
           </a>
         </div>
       </li>
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <div class='img' style='background-image: url(https://images.unsplash.com/photo-1423145369430-a9ea0de096cd?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii4.jpg') }}" alt="Galerii4">  
           </a>
         </div>
       </li>
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <div class='img' style='background-image: url(https://images.unsplash.com/photo-1432887382605-0abf9cc49e8f?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii5.jpg') }}" alt="Galerii5">
+            
           </a>
         </div>
       </li>
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-         <div class='img' style='background-image: url(https://images.unsplash.com/uploads/14122811862445bc266cf/931448f2?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii6.jpg') }}" alt="Galerii6">
+            
           </a>
         </div>
       </li>
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <div class='img' style='background-image: url(https://images.unsplash.com/photo-1417026846249-f31f7e43fc35?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii7.jpg') }}" alt="Galerii7">
+            
           </a>
         </div>
       </li>
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <div class='img' style='background-image: url(https://images.unsplash.com/uploads/14122811862445bc266cf/931448f2?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii8.jpg') }}" alt="Galerii8">
+            
           </a>
         </div>
       </li>
       <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <div class='img' style='background-image: url(https://images.unsplash.com/photo-1423145369430-a9ea0de096cd?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii9.jpg') }}" alt="Galerii9">  
           </a>
         </div>
       </li>
@@ -99,51 +85,40 @@
      <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <div class='img' style='background-image:url(https://images.unsplash.com/photo-1417436026361-a033044d901f?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=faa4e192f33e0d6b7ce0e54f15140e42);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii10.jpg') }}" alt="Galerii10">   
           </a>
         </div>
       </li>
         <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <div class='img' style='background-image: url(https://images.unsplash.com/photo-1425668273332-3a46ab26b161?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=d453ab3dec298c43415526458b360fa6);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii11.jpg') }}" alt="Galerii11">  
           </a>
         </div>
       </li>
           <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-                <div class='img' style='background-image: url(https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=49dab7a5e4b2e28b5707bc2db974c94b);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii12.jpg') }}" alt="Galerii12">   
           </a>
         </div>
       </li>
         <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <div class='img' style='background-image: url(https://images.unsplash.com/photo-1432887382605-0abf9cc49e8f?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii13.jpg') }}" alt="Galerii13">  
           </a>
         </div>
       </li>
         <li class="hex">
         <div class="hexIn">
           <a class="hexLink" href="#">
-            <div class='img' style='background-image: url(https://images.unsplash.com/photo-1417026846249-f31f7e43fc35?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'></div>
-            <h1 id="demo1">This is a title</h1>
-            <p id="demo2">Some sample text about the article this hexagon leads to</p>
+          <img src="{{ asset('images/galerii14.jpg') }}" alt="Galerii14">   
           </a>
         </div>
       </li>
     </ul>
       </div>
- 
 
 </body>
 </html>
@@ -224,13 +199,6 @@ body {
   margin: 0 auto;
 }
 
-.hex h1, .hex p {
-  width: 100%;
-  padding: 5%;
-  box-sizing:border-box;
-  font-weight: 300;
-  opacity: 0;
-}
 
 #demo1 {
   color: #F5CE95;
@@ -241,17 +209,7 @@ body {
   font-size: 1.5em;
   z-index: 1;
 }
-.hex h1:before, .hex h1:after {
-  display: inline-block;
-  margin: 0 0.5em;
-  width: 0.25em;
-  height: 0.03em;
-  background: #ffffff;
-  content: '';
-  vertical-align: middle;
-  transition: all 0.3s;
-  text-align:center;
-}
+
 
 #demo2 {
 top: 50%;
@@ -307,6 +265,49 @@ transition: 0.8s;
   opacity: 1;
 }
 
+.hex img:hover {
+  transform: scale(1.1); /* Increase the scale of the image on hover */
+}
+
+.hex img {
+  transition: transform 0.5s; /* Add a smooth transition */
+}
+
+/**siia lisan juurde treenerid */
+
+html {
+  font-size: 16px;
+}
+body {
+  background-color: #e0e0e0;         /*#fddfd5;*/
+}
+section {
+  padding: 80px;
+}
+.hero {
+  display: flex;
+  flex-direction: row;
+  width: 65%;
+  margin: auto;
+}
+div {
+  margin-right: 40px;
+  padding-top: 0;
+}
+.hero h1{  
+  text-decoration: underline, #fddfd5 ;  /* ei tööta*/
+
+}
+h1 {
+  color: black;
+  font-size: 2em;
+  padding-bottom: 25px;
+}
+p {
+  color: black;
+  font-size: 1em;
+  margin-bottom: 70px;
+}
 
 /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
 @media (min-width:1201px) { /* <- 5-4  hexagons per row */
@@ -365,9 +366,7 @@ transition: 0.8s;
         font-size: 8px;
     }
   
-
   
- 
 }
 
 

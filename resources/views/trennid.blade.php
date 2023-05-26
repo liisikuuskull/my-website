@@ -61,13 +61,13 @@ h5 {
       <img src="{{ asset('images/choreo.jpeg') }}" alt="choreo" class="rounded-img">
     </div>
     <h5>Choreo</h5>
-    <p>Choreo on algajatele mõeldud tantsutund, kuhu on oodatud ka edasijõudnud oma baasoskusi parandama. Selles tunnis on sul lihtsam kaasa teha, kui oled eelnevalt käinud personaaltreeningutel või läbinud algtaseme kursuse.</p>
+    <p>Choreo on algajatele mõeldud tantsutund,<br> kuhu on oodatud ka edasijõudnud oma baas-<br>oskusi parandama.<br> Selles tunnis on sul lihtsam kaasa teha, kui oled eelnevalt käinud personaaltreeningutel või läbinud algtaseme kursuse.</p>
   </div>
   <div class="col-md-4">
   <div class="text-center exotic">
     <img src="{{ asset('images/exotic.jpg') }}" alt="exotic" class="rounded-img">
     <h5>Exotic</h5>
-    <p>Exotic tunnis me eneseväljenduse koha pealt tagasi ei hoia. Ehime end ilusate tantsuriietega ja spetsiaalsete kontsakingadega, mis panevad meid hästi tundma. Väljendame kehaga oma tundeid ja naudime peeglist oma uhket tantsu. Tantsukava sisaldab liikumisi nii postil, kui ka põrandal. Liikumine olenevalt muusikast ja stiilist võib olla jõuline ja konkreetne või sulgkerge ja voolav.</p>
+    <p>Exotic tunnis me eneseväljenduse koha pealt tagasi ei hoia. Ehime end ilusate tantsuriietega<br>ja spetsiaalsete kontsakingadega, mis panevad meid hästi tundma. Väljendame kehaga oma tundeid ja naudime peeglist oma uhket tantsu. Tantsukava sisaldab liikumisi nii postil, kui ka põrandal. Liikumine olenevalt muusikast ja stiilist võib olla jõuline ja konkreetne või sulgkerge ja voolav.</p>
   </div>
 </div>
 

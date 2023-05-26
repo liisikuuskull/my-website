@@ -129,6 +129,7 @@ h1 {
     padding: 16px;
     color: #333;
     background-color: #fddfd5;
+    border-radius: 10px;
   }
 
   #text-container2 {
@@ -138,6 +139,7 @@ h1 {
     padding: 16px;
     color: #333;
     background-color: #fddfd5;
+    border-radius: 10px;
     
   }
 
@@ -149,14 +151,8 @@ h1 {
   }
 
   @media only screen and (max-width: 768px) {
-            .left {
-                width: 50%;
-            }
 
-            .middle {
-                width: 50%;
-            }
-
+          
             #text-container1, #text-container2 {
                 position: relative;
                 width: 90%;
@@ -165,15 +161,24 @@ h1 {
                 margin-top: 20px;
                 padding: 10px;
                 text-align: center;
-                z-index: 1; /* text is then front and moving part is back */
+                overflow-x: hidden;
+                max-width: 70%;
+
+              }
+
+              #picture-container {
+                position: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 300px;
+                width: 100%; /* Adjust the width to match the text container */
+                height: auto;
+                max-width: 100%;
+              
               }
 
 
           }
-
-  
-
-
 
   </style>
 

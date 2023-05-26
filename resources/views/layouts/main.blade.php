@@ -6,16 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Femme</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
    
    
    <style>
+
+        .nav {
+            position: fixed;
+            align-self: center;
+            width: 100%;
+            top: 0%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+
+        }
        
         .navbar {
             height: 60px;
             padding-top: 10px;
             padding-bottom: 10px;
-            background-color: #FBFBFA ;
+            background-color: #FBFBFA;
+            display: flex;
+            max-width: 1440px;
+            margin: auto;
+            position: relative;
+            
+           
         }
 
         .navbar img {
@@ -23,10 +43,13 @@
             width: auto;
         }
 
+        #navbarNav {
+            z-index: 1000;
+        }
+
         .navbar-nav .nav-link {
             color: #000 !important;
-            
-            
+              
             
         }
 
@@ -44,6 +67,7 @@
 
         .menu-btn-icon {
             display: flex;
+            
             flex-direction: column;
             justify-content: space-between;
             width: 20px;
@@ -61,14 +85,27 @@
 
         .menu-open {
             display: block;
-        }
+            z-index: 1;
+            transition: right;
+            right: 0;
+            }
 
         .menu-closed {
             display: none;
-        }
+            }
+
+        /*menu */
+
+        
+
+
+
+
+
 
 
         @media only screen and (max-width: 768px) {
+
             .left {
                 width: 50%;
             }
@@ -77,16 +114,21 @@
                 width: 50%;
             }
 
-            
-        
+            .navbar-nav {
+                display: flex;
+                justify-content: flex-end;
+                background-color: white;
+            }
         }
     </style>
+
+    
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler menu-btn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu()">
             <span class="menu-btn-icon">
                 <span></span>
                 <span></span>
@@ -94,12 +136,16 @@
             </span>
         </button>
 
-    <div class="" id="navbarNav">
-        <ul class="navbar-nav">
 
-        <a href="/home"> <!-- Replace '/' with the URL of your homepage -->
-            <img src="{{ asset('images/logo.png') }}" alt="Logo">
-        </a>
+    
+        <div class="navbar-collapse ml-auto collapse index-modal" id="navbarNav">
+            <ul class="navbar-nav bg-light">
+                <!-- Your menu items here -->
+                
+                
+                <a href="/home"> 
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo">
+                </a>
 
             <li class="nav-item">
                 <a class="nav-link" href="trennid">Trennid</a>
@@ -125,35 +171,34 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="kontakt">Kontakt</a>
             </li>
-            
-        </ul>
-    </div>
-</nav>
+            </ul>
+        </div>
+    </nav>
+        
+     
+        
+    
+
 <main>
 @yield('content')
 </main>
 
-</body>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script>
-    $(document).ready(function() {
-        // Get references to the menu button and menu container
-        var menuButton = $('.menu-btn');
-        var menuContainer = $('.navbar-nav');
+    function toggleMenu() {
+        var navbarNav = document.getElementById("navbarNav");
+        navbarNav.classList.toggle("menu-open");
+}
 
-        // Add a click event listener to the menu button
-        menuButton.on('click', function() {
-            // Toggle the 'menu-open' class on the menu container
-            menuContainer.toggleClass('menu-open');
-        });
-    });
 </script>
 
 
+</body>
+</html>
 
 
 

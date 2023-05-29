@@ -22,23 +22,23 @@ Platvormiks valisime Laraveli, kuna see on üks populaarsemaid PHP-põhiseid vee
 - Figma (https://www.figma.com/file/agCfEYsAUFtB48fYoVZ8sD/Untitled?type=design&node-id=0-1&t=EywXpargY0WH7T3K-0)
 
 ## Ajakava
--Ettevalmistus (1-2 nädalat)
+1.Ettevalmistus (1-2 nädalat)
 *Projekti eesmärkide ja vajaduste selgitamine
 *Aja ressursside planeerimine
 *Tööprotsesside ja -meetodite läbivaatamine
--Funktsioonide etapp (2-3 nädalat):
+2.Funktsioonide etapp (2-3 nädalat):
 *Selgitasime välja kõik vajalikud funktsioonid, mis peavad veebilehel olema
 *Koostasime nimekirja vajalikest funktsioonidest ja nende prioriteedijärjestusest
 *Kavandasime funktsioonide paigutuse veebilehel ja nende omavahelise seose
 *Alustasime funktsioonide arendamist ja rakendamist vastavalt prioriteedile ja ajakavale
--Disaini etapp (2-3 nädalat)
+3.Disaini etapp (2-3 nädalat)
 *Visuaali analüüs
 *Disainikontseptsiooni loomine Figma-s
 *Disaini prototüübi testimine
--Arendusetapp (4-6 nädalat)
+4.Arendusetapp (4-6 nädalat)
 *Veebilehe / rakenduse arendamine
 *Testimine ja vigade parandamine
--Viimistlusetapp (1-2 nädalat)
+5.Viimistlusetapp (1-2 nädalat)
 *Kasutajate testimine ja tagasiside kogumine
 *Veebilehe / rakenduse käivitamine ja levitamine
         

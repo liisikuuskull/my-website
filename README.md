@@ -23,24 +23,24 @@ Platvormiks valisime Laraveli, kuna see on üks populaarsemaid PHP-põhiseid vee
 
 ## Ajakava
 1.Ettevalmistus (1-2 nädalat)
-        *Projekti eesmärkide ja vajaduste selgitamine
-        *Aja ressursside planeerimine
-        *Tööprotsesside ja -meetodite läbivaatamine
+*Projekti eesmärkide ja vajaduste selgitamine
+*Aja ressursside planeerimine
+*Tööprotsesside ja -meetodite läbivaatamine
 2.Funktsioonide etapp (2-3 nädalat):
-        *Selgitasime välja kõik vajalikud funktsioonid, mis peavad veebilehel olema
-        *Koostasime nimekirja vajalikest funktsioonidest ja nende prioriteedijärjestusest
-        *Kavandasime funktsioonide paigutuse veebilehel ja nende omavahelise seose
-        *Alustasime funktsioonide arendamist ja rakendamist vastavalt prioriteedile ja ajakavale
+*Selgitasime välja kõik vajalikud funktsioonid, mis peavad veebilehel olema
+*Koostasime nimekirja vajalikest funktsioonidest ja nende prioriteedijärjestusest
+*Kavandasime funktsioonide paigutuse veebilehel ja nende omavahelise seose
+*Alustasime funktsioonide arendamist ja rakendamist vastavalt prioriteedile ja ajakavale
 3.Disaini etapp (2-3 nädalat)
-        *Visuaali analüüs
-        *Disainikontseptsiooni loomine Figma-s
-        *Disaini prototüübi testimine
+*Visuaali analüüs
+*Disainikontseptsiooni loomine Figma-s
+*Disaini prototüübi testimine
 4.Arendusetapp (4-6 nädalat)
-        *Veebilehe / rakenduse arendamine
-        *Testimine ja vigade parandamine
+*Veebilehe / rakenduse arendamine
+*Testimine ja vigade parandamine
 5.Viimistlusetapp (1-2 nädalat)
-        *Kasutajate testimine ja tagasiside kogumine
-        *Veebilehe / rakenduse käivitamine ja levitamine
+*Kasutajate testimine ja tagasiside kogumine
+*Veebilehe / rakenduse käivitamine ja levitamine
         
 ## Kokkuvõte
 Projekti käigus õppisime mitmeid uusi oskusi ja teadmisi, mis on seotud veebilehe loomise ja disainimisega. Õpitu ja saavutatu on oluline nii veebiarenduse kui ka projekti juhtimise ja meeskonnatöö aspektidest ning aitab kaasa tulevaste projektide edukale elluviimisele.
